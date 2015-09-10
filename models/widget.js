@@ -3,11 +3,12 @@ var mongoose = require("mongoose")
 var schema = mongoose.Schema({
     name: {
         type: String,
-        required: '{PATH} is required'},
+    },
     description: {
-        type: String,
-        required: '{PATH} is required'},
-    number: Number
+        type: String
+    },
+    number: Number,
+    tags: [{ tagname: String}],
 })
 
 module.exports = mongoose.model("Widget", schema)
